@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap");
+
+
+.navContainer{
+display: flex;
+justify-content: space-between;
+margin-left: 35px;
+margin-right: 35px;
+
+}
+.sections{
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    margin-top: 12px;
+
+}
+
+.sections h2{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.logo{
+    font-size: 64px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    
+
+}
+
+h2:hover{
+ text-decoration: underline;
+}
