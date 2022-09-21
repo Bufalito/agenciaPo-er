@@ -1,0 +1,166 @@
+.sectionTitulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 72%;
+    margin: 0 auto;
+    gap: 2.5em;
+    margin-top: 6em;
+}
+
+.sectionTitulo h1 {
+    font-size: 42px;
+    font-weight: 600;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sectionTitulo p {
+    font-size: 22px;
+    font-weight: 600;
+    width: 70%;
+    text-align: center;
+}
+
+.sectionDescriptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10em auto 6em;
+    border: 2px solid #000000;
+    border-radius: 45px;
+    width: 80%;
+    padding: 2em 0 4em 0;
+}
+
+.sectionDescriptions h2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.generalDivDesc {
+    width: 80%;
+    margin: 4em auto;
+    display: grid;
+    grid-template-areas:
+        "divDesc divDesc "
+        "divDesc divDesc ";
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5.5em;
+}
+
+.divDesc h3 {
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.divDesc p {
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 0.5em;
+}
+
+.sectionPrice {
+    width: 70%;
+    margin: 0 auto 4em;
+}
+
+.divPrice {
+    display: flex;
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.pLista {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.pLista span {
+    text-decoration: line-through;
+    color: #686868;
+}
+
+.pCuotas {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.pCuotas span {
+    color: #12275C;
+}
+
+.divPriceDesc {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.divDescuento {
+    width: 50%;
+    background-color: #7093EC;
+    border-radius: 10px 100px 55px;
+    height: 6em;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.divDescuento p {
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.totalDescuento {
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.divSup {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5em;
+}
+
+.btnConsultar {
+    width: 20%;
+    height: 2em;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: 700;
+    font-size: 36px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    overflow: hidden;
+    border-radius: 20px;
+    border: none;
+    background-color: #12275C
+}
+
+.btnConsultar:hover {
+    border-radius: 20px;
+    padding-right: 28px;
+    padding-left: 8px;
+}
+
+.btnConsultar:hover:after {
+    opacity: 1;
+    right: 10px;
+}
+
+.btnConsultar:after {
+    content: "\00BB";
+    position: absolute;
+    opacity: 0;
+    font-size: 36px;
+    line-height: 40px;
+    top: 24%;
+    right: -20px;
+    transition: 0.4s;
+}

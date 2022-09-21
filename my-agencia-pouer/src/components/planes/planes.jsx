@@ -13,6 +13,8 @@ import economica from "../../icons/Devices-bro2.svg"
 import basico from "../../icons/Hand-coding-bro2.svg"
 import tienda from "../../icons/Website-Creator-bro2.svg"
 
+import { Link } from "react-router-dom";
+
 
 export default function Planes() {
 
@@ -25,8 +27,8 @@ export default function Planes() {
     { img: email, titulo: "Correos", texto: "Tu negocio se destacará con una ficha en los resultados cuando te busquen en Google o Google Maps." },
     { img: blog, titulo: "Blog", texto: "Llevá adelante el blog de tu sitio y posicionate como todo un experto. Te capacitamos con tutoriales y soporte." }]
 
-    const planes = [{ img: economica, titulo: "Economica", texto: "Diseño web económico para emprendedores y PyMEs", btn: "Ver mas", id: "economica" },
-    { img: basico, titulo: "Basica", texto: "Diseño web para profesionales y para empresas", btn: "Ver mas", id: "basica" },
+    const planes = [{ img: economica, titulo: "Economica", texto: "Diseño web económico para emprendedores y PyMEs", btn: "Ver mas", id: "economico" },
+    { img: basico, titulo: "Basica", texto: "Diseño web para profesionales y para empresas", btn: "Ver mas", id: "basico" },
     { img: tienda, titulo: "Tienda online", texto: "Diseño web ecommerce: Vendé online las 24hs del día", btn: "Ver mas", id: "tienda" }]
 
     return (
@@ -61,7 +63,7 @@ export default function Planes() {
                                 <img src={e.img} className={s.imgCards} />
                                 <h1 className={s.tituloCards}>{e.titulo}</h1>
                                 <p className={s.textoCards}>{e.texto}</p>
-                                <button className={s.btnCards}>{e.btn}</button>
+                                <Link to={`/detallesPlanes?${e.id}`} className={s.link}><button className={s.btnCards}>{e.btn}</button></Link>
                             </div>
                         )
                     })}
@@ -69,8 +71,8 @@ export default function Planes() {
             </section>
 
             <section className={s.sectionAsesorarme}>
-                <h1 className={s.titleAsesorarme}>Si no encuentras lo pagina que se adapte a tus <br/> necesidades no dudes en consultarnos</h1>
-                <hr className={s.hrAsesorarme}/>
+                <h1 className={s.titleAsesorarme}>Si no encuentras lo pagina que se adapte a tus <br /> necesidades no dudes en consultarnos</h1>
+                <hr className={s.hrAsesorarme} />
                 <button className={s.btnAsesorarme}>Asesorarme</button>
             </section>
         </>
