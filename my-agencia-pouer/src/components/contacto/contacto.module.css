@@ -1,0 +1,89 @@
+.tituloContacto {
+    margin: 5% 0 2% 1%;
+    font-size: 64px;
+    text-align: center;
+}
+
+.subtituloContacto {
+    margin-left: 1%;
+    font-size: 36px;
+    text-align: center;
+}
+
+.contactoDivGeneral {
+    display: flex;
+    width: 90%;
+    margin: 7em auto 1em;
+}
+
+.formularioContacto {
+    width: 70%;
+}
+
+.contactoNumero {
+    width: 30%;
+    background-color: #12275C;
+    text-align: center;
+    border-radius: 2em;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.formularioContacto form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: solid white;
+    border-radius: 30px;
+    gap: 2em;
+}
+
+.formularioContacto input {
+    width: 90%;
+    height: 4em;
+    background: #EDEDED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+    border: none;
+    border-radius: 10px;
+}
+
+.formularioContacto textarea {
+    width: 90%;
+    height: 6em;
+    box-sizing: border-box;
+    font-size: 20px;
+    background: #EDEDED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+    border: none;
+    border-radius: 10px;
+}
+
+.contactoButton {
+    margin-left: 5%;
+    padding: 1em 3em 1em 3em;
+    border-radius: 6px;
+    background-color: #12275C;
+    color: #FFFFFF;
+}
+
+.contactoNumero h4 {
+    margin-top: 4em;
+    color: white;
+    font-size: 20px;
+}
+
+.contactoNumero ul {
+    margin-top: 2em;
+    margin-right: 2em;
+    color: white;
+    text-align: center;
+    list-style: none;
+}
+
+.contactoNumero li {
+    margin-bottom: 1em;
+}
+
+.contactoNumero img{
+    padding: 1em;
+}
