@@ -4,6 +4,8 @@ import img1 from '../../images/home.svg'
 import icon1 from '../../images/icon1.svg'
 import icon2 from '../../images/icon2.svg'
 import icon3 from '../../images/icon3.svg'
+import { Link } from 'react-router-dom';
+
 
 
 export default function Home() {
@@ -17,7 +19,7 @@ export default function Home() {
                     <p>
                     Diseñamos y desarrollamos la web que <br></br> mejor se adapte a tus necesidades.
                     </p>
-                    <button className={h.buttonHome} >Planes</button>
+                    <Link to={'/planes'}><button className={h.buttonHome} >Planes</button></Link> 
 
                 </div>
                 <div>

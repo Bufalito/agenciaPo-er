@@ -14,6 +14,7 @@
     justify-content: space-around;
     gap: 15px;
     margin-top: 12px;
+    height: 20px;
 
 }
 
@@ -21,16 +22,27 @@
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    height: 20px;
+
+
 }
 
 .logo {
     font-size: 64px;
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
+    height: 64px;
 
 }
 
 .sections h2:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+
+.Link{
+    text-decoration: none;
+    color: black;
+
 }
