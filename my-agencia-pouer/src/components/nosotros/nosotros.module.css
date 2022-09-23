@@ -1,5 +1,128 @@
 .containerDiv {
-    height: 80vh;
-    background-color: blue;
-    border-radius: 0% 0% 0% 30%;
+    height: 70vh;
+    background-color: rgb(18, 39, 92);
+    border-radius: 0% 0% 0% 20%;
+    color: white;
+}
+
+
+.tituloN{
+    padding-top: 10rem;
+    padding-left: 2rem;
+    font-size: 48px;
+
+}
+
+.parrafoN{
+    padding-left: 2rem;
+    padding-top: 1rem;
+    font-size: 24px;
+}
+
+.button1{
+    margin-left: 30px;
+    margin-top: 40px;
+    width:181px ;
+    height: 74px;
+    font-size: 24px;
+    border-radius: 30px;
+    color:rgb(18, 39, 92);
+    font-weight: 600;
+    border: 0px;
+
+
+}
+
+.button1:hover{
+    color: white;
+    background-color: rgb(112, 147, 236);
+    /* border: 2px solid rgb(18, 39, 92); */
+
+}
+
+
+.button2{
+
+    margin-left: 20px;
+    width:181px ;
+    height: 74px;
+    font-size: 24px;
+    border-radius: 30px;
+    color:white;
+    background-color:rgb(18, 39, 92) ;
+    border: 2px solid white;
+    font-weight: 600;
+
+
+
+}
+
+.button2:hover{
+    background-color: white;
+    background-color: rgb(112, 147, 236);
+
+}
+
+.quienes{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    color: black;
+
+}
+
+.quienes h1{
+    font-size: 54px;
+    color: rgb(18, 39, 92);
+    font-weight: 600;
+
+}
+
+.quienes p{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+.honores{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 20vh;
+    background-color: rgb(112, 147, 236);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+.boxicon{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+
+.buttonFinal{
+    background-color: rgb(18, 39, 92);
+    color: white;
+    width: 245px;
+    height: 80px ;
+    border-radius: 40px;
+    margin-bottom: 40px;
+    font-size: 25px;
+    margin-left: 33rem;
+    font-weight: 500;
+}
+
+.buttonFinal:hover{
+    background-color: white;
+    color: rgb(18, 39, 92);
+    border: 2px solid rgb(18, 39, 92);
+
 }
