@@ -2,7 +2,7 @@
 
 
 .containerHome{
-    margin-top: 120px;
+    margin-top: 150px;
     display: flex;
     justify-content: space-between;
     margin-right: 35px;
@@ -35,6 +35,13 @@
     font-size: 24px;
     margin-top: 20px;
 
+
+}
+
+.buttonHome:hover{
+background-color: white;
+color: black;
+stroke: black 2px;
 
 }
 
@@ -84,7 +91,7 @@
 }
 
 .parrafo{
-    font-size: 14px;
+    font-size: 13px;
     margin-top: 7px;
     text-align: center;
     font-weight: 400;
@@ -94,10 +101,13 @@
 .banner{
     display: flex;
     background-color: rgb(190, 188, 188);
-    width: 1200px;
+    width: 100%;
     height: 180px;
     margin-top: 250px;
     justify-content: center;
-    margin-left: 35px;
+    align-items: center;
     margin-bottom: 150px;
+    
+
+
 }
