@@ -1,10 +1,12 @@
 import React from 'react';
-import "./nosotros.css";
+import n from "./nosotros.module.css";
 
 export default function Nosotros(){
     return(
         <>
-        <h1>ESTO ES NOSOTROS</h1>
+        <div className={n.containerDiv}>
+            a
+        </div>
         </>
     )
 }
