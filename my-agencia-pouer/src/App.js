@@ -7,6 +7,7 @@ import Nosotros from "./components/nosotros/nosotros";
 import Planes from "./components/planes/planes";
 import PreviewPay from "./components/previewPay/previewPay";
 import Nav from "./components/navBar/Nav";
+import Footer from "./components/footer/footer";
 import { useLocation } from "react-router-dom";
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/planes" element={<Planes />} />
         <Route path="/previewPay" element={<PreviewPay />} />
       </Routes>
+      <footer> <Footer /> </footer>
     </>
   );
 }

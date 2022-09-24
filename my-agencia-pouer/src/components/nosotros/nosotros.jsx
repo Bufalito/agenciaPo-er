@@ -62,14 +62,11 @@ export default function Nosotros(){
         
         
         </section>   
-        <Link to={'/contacto'} >
-        <button className={n.buttonFinal}>Asesorarme</button>
-
-
-        </Link>
-
-
-
+        <div className={n.center}>
+            <Link to={'/contacto'} >
+                <button className={n.buttonFinal}>Asesorarme</button>
+            </Link>
+        </div>
         </div>
         </>
     )

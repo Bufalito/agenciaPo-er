@@ -29,8 +29,7 @@
     color:rgb(18, 39, 92);
     font-weight: 600;
     border: 0px;
-
-
+    cursor: pointer;
 }
 
 .button1:hover{
@@ -42,7 +41,6 @@
 
 
 .button2{
-
     margin-left: 20px;
     width:181px ;
     height: 74px;
@@ -52,9 +50,7 @@
     background-color:rgb(18, 39, 92) ;
     border: 2px solid white;
     font-weight: 600;
-
-
-
+    cursor: pointer;
 }
 
 .button2:hover{
@@ -116,13 +112,16 @@
     border-radius: 40px;
     margin-bottom: 40px;
     font-size: 25px;
-    margin-left: 33rem;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .buttonFinal:hover{
     background-color: white;
     color: rgb(18, 39, 92);
     border: 2px solid rgb(18, 39, 92);
-
+}
+.center {
+    display: flex;
+    justify-content: center;
 }
