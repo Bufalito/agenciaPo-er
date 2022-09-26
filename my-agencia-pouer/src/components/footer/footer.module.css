@@ -1,0 +1,17 @@
+.cointainerM{
+    width: 100%;
+    height: 120px;
+    background-color: rgb(18,39,92);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.centerVertically {
+    margin: auto 0;
+}
+
+.imagesContainer {
+    display: flex;
+    gap: 1rem;
+}
