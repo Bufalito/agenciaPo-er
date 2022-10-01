@@ -4,3 +4,16 @@
   margin: 0;
   font-family: 'Poppins', sans-serif;
 }
+
+.bgAzul {
+
+  background-color: rgb(18, 39, 92);
+}
+.bgAzul h1{
+  color: white;
+
+}
+
+.bgAzul h2{
+  color: white;
+}

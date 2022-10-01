@@ -68,7 +68,43 @@ export default function DetallePlanes() {
                 </div>
             </section>
 
-            <section className={s.sectionPrice}>
+
+            <section className={s.detallesEspecificos}>
+                <h2>Detalles  del Plan</h2>
+                <p>
+                Hoy más que nunca un sitio web es fundamental par cualquier empresa, comercio o profesional. <br></br>
+                Empecemos hoy tu Sitio Web y mantené abierto tu negocio las 24 hs. del día, los 365 días del año. <br></br>
+                <br></br>
+                Obtené tu {data[location].titulo} que incluye: <br></br>
+                <br></br>
+
+                - Home page + 3 secciones internas(servicios, contacto, quienes somos). <br></br>
+                - Slidershow (1 banner principal). <br></br>
+                - Formularios de contacto. <br></br>
+                - Links a RRSS y Whatsapp.  <br></br>  
+                </p>
+            </section>        
+            <section className={s.containerBanner}>
+                <div className={s.banner}>
+                <p>AHORRA UN 20%</p>
+                </div>
+                <div className={s.banner2}>
+                <p className={s.pLista}>Precio de lista <span>${data[location].precioLista}</span></p>
+                <p className={s.totalDescuento}>Total con descuento<br />${Number(data[location].precioLista) - ((Number(data[location].precioLista) * 20) / 100).toFixed(3)}</p>
+
+                </div>
+
+
+
+            </section>
+
+
+
+
+
+
+
+            {/* <section className={s.sectionPrice}>
                 <div className={s.divPrice}>
                     <p className={s.pLista}>Precio de lista <span>${data[location].precioLista}</span></p>
                     <p className={s.pCuotas}>3 cuotas sin interes de <span>${((Number(data[location].precioLista) - ((Number(data[location].precioLista) * 20) / 100)) / 3).toFixed(3)}</span></p>
@@ -78,8 +114,11 @@ export default function DetallePlanes() {
                     <p className={s.totalDescuento}>Total con descuento<br />${Number(data[location].precioLista) - ((Number(data[location].precioLista) * 20) / 100).toFixed(3)}</p>
                 </div>
             </section>
+             */}
+
+
             <div className={s.divSup}>
-                <button className={s.btnConsultar}><Link className={s.link} to={`/previewPay?${location}`}>Consultar</Link></button>
+                <button className={s.btnConsultar}>Comprar</button>
             </div>
         </>
     )
