@@ -81,40 +81,6 @@ export default function PreviewPay() {
 
     return (
         <>
-            <section className={s.sectionGeneral}>
-                <span className={s.spanTitulo}>
-                    <h1>{data[location].titulo}</h1>
-                    <hr />
-                </span>
-                <div className={s.secTexto}>
-                    <p className={s.description}>{data[location].description}</p>
-                    <p className={s.subDescription}>{data[location].subDescription}</p>
-
-                    <div className={s.caracteristicas}>
-                        <p>Incluye:</p>
-                        {data[location].sections.map((e) => {
-                            return (
-                                <li>{e.caracteristicas}</li>
-                            )
-                        })}
-                    </div>
-
-                    <div className={s.pouerMenGeneral}>
-                        <p className={s.titleMensual}>Poüer mensual</p>
-                        <p>Obtené acceso a modificaciones de textos, imágenes y videos en cualquier momento que lo requieras.</p>
-                        <span>
-                            <div className={s.pouerMensual}>
-                                <input type="checkbox" />
-                                <p>Quiero agregar Pouer mensual por <span>$3200</span> por mes</p>
-                            </div>
-                            <p className={s.subInfo}>*Este servicio se renueva cada 30 dias*</p>
-                        </span>
-                    </div>
-
-                    <button className={s.btnPreview}>Finalizar compra</button>
-                </div>
-
-            </section>
             <section className={s.cuerpoModal}>
                 <div className={s.modal}>
                     <p className={s.titleModal}>POÜER</p>

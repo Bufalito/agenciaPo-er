@@ -167,6 +167,7 @@ article section p {
     color: white;
     height: 0%;
     overflow: hidden;
+    display: none;
 }
 
 .desplegable p {
@@ -178,6 +179,7 @@ article section p {
     color: white;
     height: 100%;
     animation: active 1.2s linear;
+    display: block;
 }
 
 .active p {
