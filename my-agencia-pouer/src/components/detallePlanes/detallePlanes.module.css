@@ -143,6 +143,11 @@
     background-color: #12275C
 }
 
+.link{
+    text-decoration: none;
+    color: white;
+}
+
 .btnConsultar:hover {
     border-radius: 20px;
     padding-right: 28px;

@@ -1,6 +1,8 @@
 import React from 'react'
 import s from "./detallePlanes.module.css"
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 export default function DetallePlanes() {
     const location = useLocation().search.substring(1)
@@ -77,7 +79,7 @@ export default function DetallePlanes() {
                 </div>
             </section>
             <div className={s.divSup}>
-                <button className={s.btnConsultar}>Consultar</button>
+                <button className={s.btnConsultar}><Link className={s.link} to={`/previewPay?${location}`}>Consultar</Link></button>
             </div>
         </>
     )

@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import s from "./previewPay.module.css";
+import { useLocation } from "react-router-dom"
+import mercadoPago from "../../icons/arcticons_mercado-pago.svg"
+import { useEffect } from "react";
 
 export default function PreviewPay() {
-
+    const location = useLocation().search.substring(1)
     const data = {
         economico: {
-            titulo: "Sitio Web Economico | 1° cuota",
+            titulo: "Sitio Web Economico",
             description: "Hoy más que nunca un sitio web es fundamental par cualquier empresa, comercio o profesional. Empecemos hoy tu Sitio Web Basic de PACK y mantené abierto tu negocio las 24 hs. del día, los 365 días del año.",
             subDescription: "Obtené un sitio web economico y pagalo hasta en 3 cuotas sin interés con dominio.com.ar, Hosting y Certificado SSL (web segura) por un año totalmente bonificado.",
             sections: [
-                { caracteristicas: "Home page + 1 sección de contacto." },
+                { caracteristicas: "Home page + 3 secciones internas(servicios, contacto, quienes somos)." },
                 { caracteristicas: "Slidershow (3 banners principales)." },
                 { caracteristicas: "Formularios de contacto." },
                 { caracteristicas: "Links a RRSS, WhatsApp y Maps." },
@@ -19,7 +22,7 @@ export default function PreviewPay() {
         },
 
         basico: {
-            titulo: "Sitio Web Basico | 1° cuota",
+            titulo: "Sitio Web Basico",
             description: "Hoy más que nunca un sitio web es fundamental par cualquier empresa, comercio o profesional. Empecemos hoy tu Sitio Web y mantené abierto tu negocio las 24 hs. los 365 días del año.",
             subDescription: "Obtené una página web y pagala hasta en 3 cuotas sin interés con dominio.com.ar, Hosting y Certificado SSL (web segura) por un año totalmente bonificado.",
             sections: [
@@ -33,7 +36,7 @@ export default function PreviewPay() {
         },
 
         tienda: {
-            titulo: "Tienda online | 1° cuota",
+            titulo: "Tienda online",
             description: "Hoy más que nunca un ecommerce es fundamental para cualquier empresa, comercio o profesional​. Adquirí tu sitio sin comisión por venta, gestión de productos, ventas y clientes, control de stock, múltiples medios de pago y pagalo hasta en 3 cuotas sin interés con  dominio .com.ar, hosting y certificado SSL (web segura) por un año totalmente bonificado.",
             subDescription: "",
             sections: [
@@ -51,9 +54,115 @@ export default function PreviewPay() {
             precioLista: "109.580"
         }
     }
+
+    const [stateCbox1, setstateCbox1] = useState(false)
+    const [stateCbox2, setstateCbox2] = useState(false)
+
+    useEffect(() => {
+        console.log("stateCbox1", stateCbox1)
+        console.log("stateCbox2", stateCbox2)
+    }, [stateCbox1, stateCbox2])
+
+    function handleChack(id) {
+        /*  id.target.id === "cbox1" ? setstateCbox1(id.target.checked) : console.log("nada")
+ 
+         id.target.id === "cbox2" ? setstateCbox2(id.target.checked) : console.log("nada") */
+        if (id.target.id === "cbox1") {
+            setstateCbox1(id.target.checked)
+            document.getElementById("desplegable1").classList.toggle(s.active)
+        } else {
+            setstateCbox2(id.target.checked)
+        }
+    }
+
+    function handleClick(id) {
+        id === "1" ? document.getElementById("cbox1").click() : document.getElementById("cbox2").click()
+    }
+
     return (
         <>
-            <h1>ESTO ES PREVIEW PAY</h1>
+            <section className={s.sectionGeneral}>
+                <span className={s.spanTitulo}>
+                    <h1>{data[location].titulo}</h1>
+                    <hr />
+                </span>
+                <div className={s.secTexto}>
+                    <p className={s.description}>{data[location].description}</p>
+                    <p className={s.subDescription}>{data[location].subDescription}</p>
+
+                    <div className={s.caracteristicas}>
+                        <p>Incluye:</p>
+                        {data[location].sections.map((e) => {
+                            return (
+                                <li>{e.caracteristicas}</li>
+                            )
+                        })}
+                    </div>
+
+                    <div className={s.pouerMenGeneral}>
+                        <p className={s.titleMensual}>Poüer mensual</p>
+                        <p>Obtené acceso a modificaciones de textos, imágenes y videos en cualquier momento que lo requieras.</p>
+                        <span>
+                            <div className={s.pouerMensual}>
+                                <input type="checkbox" />
+                                <p>Quiero agregar Pouer mensual por <span>$3200</span> por mes</p>
+                            </div>
+                            <p className={s.subInfo}>*Este servicio se renueva cada 30 dias*</p>
+                        </span>
+                    </div>
+
+                    <button className={s.btnPreview}>Finalizar compra</button>
+                </div>
+
+            </section>
+            <section className={s.cuerpoModal}>
+                <div className={s.modal}>
+                    <p className={s.titleModal}>POÜER</p>
+                    <form>
+                        <label>Nombre Completo *</label>
+                        <input />
+                        <label>Correo Electronico *</label>
+                        <input />
+                        <label>Telefono*</label>
+                        <input />
+                        <label>Localidad/Ciudad *</label>
+                        <input />
+                    </form>
+                    <article>
+                        <section>
+                            <div>
+                                <p className={s.resaltado}>Producto</p>
+                                <p>{data[location].titulo}</p>
+                                <p>IVA + Impuesto</p>
+                                <p className={s.resaltado}>Total</p>
+                            </div>
+                            <div>
+                                <p className={s.resaltado}>Subtotal</p>
+                                <p> ${((data[location].precioLista) - (data[location].precioLista * 20) / 100).toFixed(3)}</p>
+                                <p>$2.193</p>
+                                <p className={s.resaltado}>${(((data[location].precioLista) - (data[location].precioLista * 20) / 100) + 2.193).toFixed(3)} ARS</p>
+                            </div>
+                        </section>
+                        <button className={s.acordion} onClick={() => handleClick("1")}><input type="checkbox" id="cbox1" onChange={(id) => handleChack(id)} /><p>Transferencia Bancaria</p></button>
+                        <div id="desplegable1" className={s.desplegable}>
+                            <p>
+                                Realizá tu pago directamente en nuestra cuenta bancaria.<br />
+                                <br />
+                                Titular:  el piketa<br />
+                                Cuentas en pesos en Banco Santander: 112-361592/0<br />
+                                CBU: 0720112388000036159204<br />
+                                CUIT: 20-30344074-8<br />
+                                <br />
+                                Una vez realizado el pago, te pedimos que nos envíes el comprobante por email a pouer@gmail.com detallando importe exacto, fecha del depósito o transferencia así podremos identificarlo y evitar demoras.<br />
+                                <br />
+                                Importante: Tu pedido no se procesará hasta que se haya recibido el importe en nuestra cuenta.<br />
+                            </p>
+                        </div>
+                        <button className={s.acordion} onClick={() => handleClick("2")}><input type="checkbox" id="cbox2" onChange={(id) => handleChack(id)} /><p>Paga con el medio de pago que prefieras </p> <img src={mercadoPago} /></button>
+                    </article>
+                </div>
+
+            </section>
         </>
     )
 }
