@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom"
 import mercadoPago from "../../icons/arcticons_mercado-pago.svg"
 import { useEffect } from "react";
 
-export default function PreviewPay() {
+export default function PreviewPay({ acc }) {
     const location = useLocation().search.substring(1)
     const data = {
         economico: {
@@ -83,7 +83,7 @@ export default function PreviewPay() {
         <>
             <section className={s.cuerpoModal}>
                 <div className={s.modal}>
-                    <p className={s.titleModal}>POÜER</p>
+                    <p className={s.titleModal}>POÜER <span className={s.close} onClick={() => acc()}>X</span></p>
                     <form>
                         <label>Nombre Completo *</label>
                         <input />

@@ -77,6 +77,11 @@ export default function DetallePlanes() {
         document.getElementById("modal").classList.toggle(s.modalInActive)
     }
 
+    function handleCloseModal() {
+        document.getElementById("modal").classList.toggle(s.modalInActive)
+    }
+
+
     return (
         <>
             <section className={s.sectionTitulo}>
@@ -124,35 +129,13 @@ export default function DetallePlanes() {
                     <p className={s.totalDescuento}>Total con descuento<br />${Number(data[location].precioLista) - ((Number(data[location].precioLista) * 20) / 100).toFixed(3)}</p>
 
                 </div>
-
-
-
             </section>
-
-
-
-
-
-
-
-            {/* <section className={s.sectionPrice}>
-                <div className={s.divPrice}>
-                    <p className={s.pLista}>Precio de lista <span>${data[location].precioLista}</span></p>
-                    <p className={s.pCuotas}>3 cuotas sin interes de <span>${((Number(data[location].precioLista) - ((Number(data[location].precioLista) * 20) / 100)) / 3).toFixed(3)}</span></p>
-                </div>
-                <div className={s.divPriceDesc}>
-                    <div className={s.divDescuento}><p>AHORRA UN 20%</p></div>
-                    <p className={s.totalDescuento}>Total con descuento<br />${Number(data[location].precioLista) - ((Number(data[location].precioLista) * 20) / 100).toFixed(3)}</p>
-                </div>
-            </section>
-             */}
-
 
             <div className={s.divSup}>
                 <button className={s.btnConsultar} onClick={() => handleOpenModal()}>Comprar</button>
             </div>
 
-            <div id="modal" className={s.modalInDetalle}><Modal /></div>
+            <div id="modal" className={s.modalInDetalle}><Modal acc={handleCloseModal} /></div>
         </>
     )
 }
