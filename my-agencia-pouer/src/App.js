@@ -9,6 +9,8 @@ import Nav from "./components/navBar/Nav";
 import Footer from "./components/footer/footer";
 import { useLocation } from "react-router-dom";
 
+import MercadoPago from "./components/mercadoPago/mercadoPago"
+
 
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/planes" element={<Planes />} />
+        <Route path="/mercadoPago" element={<MercadoPago />} />
       </Routes>
       <footer> <Footer /> </footer>
     </>
