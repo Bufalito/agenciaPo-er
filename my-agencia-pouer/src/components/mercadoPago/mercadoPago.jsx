@@ -1,24 +1,36 @@
-import React ,{useEffect}from 'react';
-import s from "./mercadoPago.module.css";
+import React, { useEffect, useCallback } from 'react';
+import { useLocation } from "react-router-dom";
+import axios from "axios"
 
 export default function MercadoPago() {
+    const FORM_ID = "payment-form"
+    const id = useLocation().search.substring(1)
+
+    const obtenerPreference = async function () {
+        const res = await axios.post(`http://localhost:3001/mercadopago/pay/${id}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+        console.log(res)
+        if (res.data.global) {
+             const script = document.createElement("script");
+             script.type = "text/javascript";
+             script.src = 'https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js';
+             script.setAttribute("data-preference-id", res.data.global);
+             const form = document.getElementById(FORM_ID);
+             form.appendChild(script);
+        }
+    }
+
+    useEffect(() => {
+        obtenerPreference()
+    }, [])
+
     return (
         <>
-
-            <form id="form-checkout">
-                <div id="form-checkout__cardNumber" className={s.container}></div>
-                <div id="form-checkout__expirationDate" className={s.container}></div>
-                <div id="form-checkout__securityCode" className={s.container}></div>
-                <input type="text" id="form-checkout__cardholderName" />
-                <select id="form-checkout__issuer"></select>
-                <select id="form-checkout__installments"></select>
-                <select id="form-checkout__identificationType"></select>
-                <input type="text" id="form-checkout__identificationNumber" />
-                <input type="email" id="form-checkout__cardholderEmail" />
-
-                <button type="submit" id="form-checkout__submit">Pagar</button>
-                <progress value="0" class="progress-bar">Carregando...</progress>
-            </form>
+            <form id={FORM_ID} method="GET" />
         </>
     )
 }

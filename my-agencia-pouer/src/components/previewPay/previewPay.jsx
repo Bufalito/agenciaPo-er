@@ -3,6 +3,7 @@ import s from "./previewPay.module.css";
 import { useLocation } from "react-router-dom"
 import mercadoPago from "../../icons/arcticons_mercado-pago.svg"
 import { useEffect } from "react";
+import MercadoPago from "../mercadoPago/mercadoPago"
 
 export default function PreviewPay({ acc }) {
     const location = useLocation().search.substring(1)
@@ -57,16 +58,9 @@ export default function PreviewPay({ acc }) {
 
     const [stateCbox1, setstateCbox1] = useState(false)
     const [stateCbox2, setstateCbox2] = useState(false)
+    const [stateForm, setStateForm] = useState(false)
 
-    useEffect(() => {
-        console.log("stateCbox1", stateCbox1)
-        console.log("stateCbox2", stateCbox2)
-    }, [stateCbox1, stateCbox2])
-
-    function handleChack(id) {
-        /*  id.target.id === "cbox1" ? setstateCbox1(id.target.checked) : console.log("nada")
- 
-         id.target.id === "cbox2" ? setstateCbox2(id.target.checked) : console.log("nada") */
+    const handleCheck = function (id) {
         if (id.target.id === "cbox1") {
             setstateCbox1(id.target.checked)
             document.getElementById("desplegable1").classList.toggle(s.active)
@@ -75,9 +69,13 @@ export default function PreviewPay({ acc }) {
         }
     }
 
-    function handleClick(id) {
+    const handleClick = function (id) {
         id === "1" ? document.getElementById("cbox1").click() : document.getElementById("cbox2").click()
     }
+
+    useEffect(() => {
+        setStateForm(true)
+    }, [])
 
     return (
         <>
@@ -85,6 +83,8 @@ export default function PreviewPay({ acc }) {
                 <div className={s.modal}>
                     <p className={s.titleModal}>POÜER <span className={s.close} onClick={() => acc()}>X</span></p>
                     <form>
+                        <label>Nombre Completo *</label>
+                        <input />
                         <label>Nombre Completo *</label>
                         <input />
                         <label>Correo Electronico *</label>
@@ -109,7 +109,7 @@ export default function PreviewPay({ acc }) {
                                 <p className={s.resaltado}>${(((data[location].precioLista) - (data[location].precioLista * 20) / 100) + 2.193).toFixed(3)} ARS</p>
                             </div>
                         </section>
-                        <button className={s.acordion} onClick={() => handleClick("1")}><input type="checkbox" id="cbox1" onChange={(id) => handleChack(id)} /><p>Transferencia Bancaria</p></button>
+                        <button className={s.acordion} onClick={() => handleClick("1")}><input type="checkbox" id="cbox1" onChange={(id) => handleCheck(id)} /><p>Transferencia Bancaria</p></button>
                         <div id="desplegable1" className={s.desplegable}>
                             <p>
                                 Realizá tu pago directamente en nuestra cuenta bancaria.<br />
@@ -124,11 +124,12 @@ export default function PreviewPay({ acc }) {
                                 Importante: Tu pedido no se procesará hasta que se haya recibido el importe en nuestra cuenta.<br />
                             </p>
                         </div>
-                        <button className={s.acordion} onClick={() => handleClick("2")}><input type="checkbox" id="cbox2" onChange={(id) => handleChack(id)} /><p>Paga con el medio de pago que prefieras </p> <img src={mercadoPago} /></button>
+                        <button className={s.acordion} onClick={() => handleClick("2")}><input type="checkbox" id="cbox2" onChange={(id) => handleCheck(id)} /><p>Paga con el medio de pago que prefieras </p> <img src={mercadoPago} /></button>
+                        {stateForm == true ? <MercadoPago /> : null}
                     </article>
                 </div>
-
             </section>
+
         </>
     )
 }
