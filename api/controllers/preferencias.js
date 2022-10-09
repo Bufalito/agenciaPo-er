@@ -14,7 +14,7 @@ const pago = (id) => {
                 { caracteristicas: "Links a RRSS, WhatsApp y Maps." },
                 { caracteristicas: "Chat bot automático que simula el comportamiento humano." }
             ],
-            precioLista: "42.399"
+            precioLista: "42399"
         },
 
         basico: {
@@ -28,7 +28,7 @@ const pago = (id) => {
                 { caracteristicas: "Links a RRSS, WhatsApp y Maps." },
                 { caracteristicas: "Chat bot automático que simula el comportamiento humano." }
             ],
-            precioLista: "90.275"
+            precioLista: "90275"
         },
 
         tienda: {
@@ -47,7 +47,7 @@ const pago = (id) => {
                 { caracteristicas: "Botón de WhatsApp." },
                 { caracteristicas: "Chat bot automático." },
             ],
-            precioLista: "109.580"
+            precioLista: "109580"
         }
     }
 
@@ -62,7 +62,7 @@ const pago = (id) => {
                     currency_id: "ARS",
                     description: categoriaWeb,
                     quantity: 1,
-                    unit_price: Number(((data[categoriaWeb].precioLista) - (data[categoriaWeb].precioLista * 20) / 100).toFixed(3)),
+                    unit_price: ((data[categoriaWeb].precioLista) - (data[categoriaWeb].precioLista * 20) / 100) + 2193,
                     title: data[categoriaWeb].titulo
                 }
             ],

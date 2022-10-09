@@ -58,7 +58,13 @@ export default function PreviewPay({ acc }) {
 
     const [stateCbox1, setstateCbox1] = useState(false)
     const [stateCbox2, setstateCbox2] = useState(false)
-    const [stateForm, setStateForm] = useState(false)
+    const [stateForm, setStateForm] = useState({
+        name: "",
+        email: "",
+        telefono: "",
+        localidad_ciudad: "",
+    })
+    const [pagar, setPagar] = useState(false)
 
     const handleCheck = function (id) {
         if (id.target.id === "cbox1") {
@@ -74,8 +80,16 @@ export default function PreviewPay({ acc }) {
     }
 
     useEffect(() => {
-        setStateForm(true)
-    }, [])
+        console.log(stateForm)
+        stateForm && stateForm.name.length && stateForm.email.length && stateForm.telefono.length && stateForm.localidad_ciudad.length && stateCbox2 == true ? setPagar(true) : setPagar(false);
+    }, [stateForm, stateCbox2])
+
+    function handleChange(e) {
+        setStateForm({
+            ...stateForm,
+            [e.target.name]: e.target.value
+        })
+    }
 
     return (
         <>
@@ -84,15 +98,42 @@ export default function PreviewPay({ acc }) {
                     <p className={s.titleModal}>POÜER <span className={s.close} onClick={() => acc()}>X</span></p>
                     <form>
                         <label>Nombre Completo *</label>
-                        <input />
-                        <label>Nombre Completo *</label>
-                        <input />
+                        <input
+                            type="text"
+                            pattern="[A-Za-z ]{2,254}"
+                            required="required"
+                            id="name"
+                            name="name"
+                            placeholder="Aurora Boreal"
+                            onChange={(e) => handleChange(e)} />
                         <label>Correo Electronico *</label>
-                        <input />
+                        <input
+                            type="email"
+                            pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
+                            required="required"
+                            id="email"
+                            name="email"
+                            placeholder="aurora@gmail.com"
+                            onChange={(e) => handleChange(e)} />
                         <label>Telefono*</label>
-                        <input />
+                        <input
+                            type="tel"
+                            pattern="[0-9]+"
+                            required="required"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="2477201584"
+                            onChange={(e) => handleChange(e)} />
                         <label>Localidad/Ciudad *</label>
-                        <input />
+                        <input
+                            type="text"
+                            pattern="[A-Za-z ]{2,254}"
+                            required="required"
+                            id="localidad_ciudad"
+                            name="localidad_ciudad"
+                            placeholder="Rosario"
+                            onChange={(e) => handleChange(e)} />
+
                     </form>
                     <article>
                         <section>
@@ -125,7 +166,7 @@ export default function PreviewPay({ acc }) {
                             </p>
                         </div>
                         <button className={s.acordion} onClick={() => handleClick("2")}><input type="checkbox" id="cbox2" onChange={(id) => handleCheck(id)} /><p>Paga con el medio de pago que prefieras </p> <img src={mercadoPago} /></button>
-                        {stateForm == true ? <MercadoPago /> : null}
+                        {pagar == false ? null : <MercadoPago />}
                     </article>
                 </div>
             </section>
