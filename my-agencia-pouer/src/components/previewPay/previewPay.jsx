@@ -65,6 +65,22 @@ export default function PreviewPay({ acc }) {
         localidad_ciudad: "",
     })
     const [pagar, setPagar] = useState(false)
+    const [formErrors, setFormErrors] = useState({})
+
+    const validacion = (stateForm) => {
+        let formErrors = {}
+        const reg_name = /^[a-zA-Z ]*$/;
+        const reg_email = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+        const reg_telefono = /^\d+$/
+        const reg_localidad_ciudad = /^[a-zA-Z ]*$/
+
+        stateForm.name && reg_name.test(stateForm.name) && stateForm.name.length > 5 ? console.log(true) : formErrors.name = "Ingrese nombre valido"
+        stateForm.email && reg_email.test(stateForm.email) && stateForm.email.length > 5 ? console.log(true) : formErrors.email = "Ingrese email valido"
+        stateForm.telefono && reg_telefono.test(stateForm.telefono) && stateForm.telefono.length > 5 ? console.log(true) : formErrors.telefono = "Ingrese telefono valido"
+        stateForm.localidad_ciudad && reg_localidad_ciudad.test(stateForm.localidad_ciudad) && stateForm.localidad_ciudad.length > 5 ? console.log(true) : formErrors.localidad_ciudad = "Ingrese localidad_ciudad valido"
+
+        return formErrors
+    }
 
     const handleCheck = function (id) {
         if (id.target.id === "cbox1") {
@@ -80,15 +96,20 @@ export default function PreviewPay({ acc }) {
     }
 
     useEffect(() => {
-        console.log(stateForm)
-        stateForm && stateForm.name.length && stateForm.email.length && stateForm.telefono.length && stateForm.localidad_ciudad.length && stateCbox2 == true ? setPagar(true) : setPagar(false);
-    }, [stateForm, stateCbox2])
+        console.log(Object.keys(formErrors).length)
+        console.log(stateCbox2)
+        Object.keys(formErrors).length === 0 && stateForm.name.length && stateCbox2 === true ? setPagar(true) : setPagar(false)
+    }, [stateForm, stateCbox2, formErrors])
 
     function handleChange(e) {
         setStateForm({
             ...stateForm,
             [e.target.name]: e.target.value
-        })
+        });
+        setFormErrors(validacion({
+            ...stateForm,
+            [e.target.name]: e.target.value
+        }))
     }
 
     return (
@@ -97,41 +118,37 @@ export default function PreviewPay({ acc }) {
                 <div className={s.modal}>
                     <p className={s.titleModal}>POÜER <span className={s.close} onClick={() => acc()}>X</span></p>
                     <form>
-                        <label>Nombre Completo *</label>
+                        <label>{formErrors.name ? <span className={s.errors}>{formErrors.name}</span> : "Nombre Completo*"}  </label>
                         <input
                             type="text"
-                            pattern="[A-Za-z ]{2,254}"
-                            required="required"
+                            value={stateForm.name}
                             id="name"
                             name="name"
-                            placeholder="Aurora Boreal"
+                            placeholder={formErrors.name ? formErrors.name : "Aurora Boreal"}
                             onChange={(e) => handleChange(e)} />
-                        <label>Correo Electronico *</label>
+                        <label>{formErrors.email ? <span className={s.errors}>{formErrors.email}</span> : "Correo Electronico *"}  </label>
                         <input
                             type="email"
-                            pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
-                            required="required"
+                            value={stateForm.email}
                             id="email"
                             name="email"
-                            placeholder="aurora@gmail.com"
+                            placeholder={formErrors.email ? formErrors.email : "aurora@gmail.com"}
                             onChange={(e) => handleChange(e)} />
-                        <label>Telefono*</label>
+                        <label>{formErrors.telefono ? <span className={s.errors}>{formErrors.telefono}</span> : "Telefono*"}  </label>
                         <input
                             type="tel"
-                            pattern="[0-9]+"
-                            required="required"
+                            value={stateForm.telefono}
                             id="telefono"
                             name="telefono"
-                            placeholder="2477201584"
+                            placeholder={formErrors.telefono ? formErrors.telefono : "2477201584"}
                             onChange={(e) => handleChange(e)} />
-                        <label>Localidad/Ciudad *</label>
+                        <label>{formErrors.localidad_ciudad ? <span className={s.errors}>{formErrors.localidad_ciudad}</span> : "Localidad/Ciudad *"}  </label>
                         <input
                             type="text"
-                            pattern="[A-Za-z ]{2,254}"
-                            required="required"
+                            value={stateForm.localidad_ciudad}
                             id="localidad_ciudad"
                             name="localidad_ciudad"
-                            placeholder="Rosario"
+                            placeholder={formErrors.localidad_ciudad ? formErrors.localidad_ciudad : "Rosario"}
                             onChange={(e) => handleChange(e)} />
 
                     </form>

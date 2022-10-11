@@ -93,6 +93,9 @@
     grid-area: row-start 2 / col-start 1 / row-end 2 / col-end 4;
     font-size: 14px;
 }
+.errors{
+    color: red;
+}
 
 .modal form input {
     height: 2.2em;
