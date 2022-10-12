@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap");
 
 
-.containerHome{
+.containerHome {
     margin-top: 150px;
     display: flex;
     justify-content: space-between;
@@ -9,7 +9,7 @@
     margin-left: 35px;
 }
 
-.containerHome h1{
+.containerHome h1 {
     font-size: 64px;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -26,7 +26,7 @@
     font-weight: 400;
 }
 
-.buttonHome{
+.buttonHome {
     border-radius: 35px;
     height: 59px;
     width: 131px;
@@ -38,15 +38,15 @@
 
 }
 
-.buttonHome:hover{
-background-color: white;
-color: black;
-stroke: black 2px;
+.buttonHome:hover {
+    background-color: white;
+    color: black;
+    stroke: black 2px;
 
 }
 
 
-.section2{
+.section2 {
     margin-top: 140px;
     text-align: center;
     justify-content: center;
@@ -62,7 +62,7 @@ stroke: black 2px;
 
 }
 
-.section2 h2{
+.section2 h2 {
     font-size: 32px;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -71,18 +71,18 @@ stroke: black 2px;
 
 }
 
-.section3{
+.section3 {
     display: flex;
     justify-content: space-around;
     margin-top: 80px;
     margin-top: 70px;
     justify-content: center;
     gap: 90px;
-    
+
 
 }
 
-.titulo{
+.titulo {
     font-size: 16px;
     margin-top: 30px;
     text-align: center;
@@ -90,7 +90,7 @@ stroke: black 2px;
 
 }
 
-.parrafo{
+.parrafo {
     font-size: 13px;
     margin-top: 7px;
     text-align: center;
@@ -98,7 +98,7 @@ stroke: black 2px;
     max-height: 300px;
 }
 
-.banner{
+.banner {
     display: flex;
     background-color: rgb(190, 188, 188);
     width: 100%;
@@ -107,7 +107,7 @@ stroke: black 2px;
     justify-content: center;
     align-items: center;
     margin-bottom: 150px;
-    
+
 
 
 }

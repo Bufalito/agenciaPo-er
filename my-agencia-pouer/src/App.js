@@ -15,9 +15,11 @@ import MercadoPago from "./components/mercadoPago/mercadoPago"
 
 function App() {
   const location = useLocation().pathname.slice(1)
+  const fondo = location
+  console.log(fondo ? fondo : "landing")
   const esNosotros = location === "nosotros"
   return (
-    <>
+    <div className={fondo ? fondo : "landing"}>
       <nav className={`${esNosotros && "bgAzul"}`}> <Nav /></nav>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -28,7 +30,7 @@ function App() {
         <Route path="/mercadoPago" element={<MercadoPago />} />
       </Routes>
       <footer> <Footer /> </footer>
-    </>
+    </div>
   );
 }
 

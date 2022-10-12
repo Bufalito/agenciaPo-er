@@ -5,15 +5,39 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.landing {
+  background-image: url("./images/Landing.svg");
+  background-size: cover;
+}
+
+.planes {
+  background-image: url("./images/Planes.svg");
+  background-size: cover;
+
+}
+
+.detallesPlanes {
+  background-image: url("./images/PlanesDetallados.svg");
+  background-size: cover;
+
+}
+
+.contacto {
+  background-size: cover;
+  background-image: url("./images/Contacto.svg");
+
+}
+
 .bgAzul {
 
   background-color: rgb(18, 39, 92);
 }
-.bgAzul h1{
+
+.bgAzul h1 {
   color: white;
 
 }
 
-.bgAzul h2{
+.bgAzul h2 {
   color: white;
 }
