@@ -4,6 +4,7 @@ import instagram from "../../icons/instagram-icon.svg";
 import linkedin from "../../icons/linkedin-icon.svg";
 import whatsapp from "../../icons/whatsapp-icon.svg";
 import emailjs from "emailjs-com";
+import img1 from '../../images/formsimg.svg'
 
 export default function Contacto() {
   const form = useRef();
@@ -22,7 +23,77 @@ export default function Contacto() {
 
   return (
     <>
-      <h1 className={s.tituloContacto}>Atencion Personalizada</h1>
+    <div className={s.container}>
+      <div className={s.imgContainer}>
+        <h1> Mas cerca de vos, <br></br>
+           en todo momento y a toda hora</h1> 
+         <img src={img1} alt="logo" width="600px" /> 
+
+
+
+      </div>
+      <div className={s.inputs}>
+        <h1>Contános cómo te podemos ayudar y nuestro equipo te va a estar respondiendo</h1>
+        <form ref={form} onSubmit={sendEmail}>
+      
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Nombre/Empresa"
+                required
+              />
+          
+            
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                required
+              />
+          
+            
+              {/* <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="TELEFONO"
+                required
+              /> */}
+            
+            
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder="Asunto"
+                required
+              />
+          
+            
+              <textarea
+                name="message"
+                id="message"
+                rows="3"
+                placeholder="Mensaje"
+              ></textarea>
+            
+          </form>
+
+
+
+      <button onClick={sendEmail} type="submit">
+        ENVIAR
+      </button> 
+      </div>
+
+
+
+
+
+    </div>
+      {/* <h1 className={s.tituloContacto}>Atencion Personalizada</h1>
       <h3 className={s.subtituloContacto}>
         Contanos como te podemos ayudar y <br></br> nuestro equipo te va a estar
         respondiendo
@@ -93,7 +164,9 @@ export default function Contacto() {
 
       <button onClick={sendEmail} type="submit" className={s.contactoButton}>
         ENVIAR
-      </button>
+      </button> */}
     </>
+
+
   );
 }

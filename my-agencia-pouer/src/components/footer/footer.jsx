@@ -9,11 +9,11 @@ export default function Footer(){
             <div className={s.centerVertically}>
                 <h3>Contacto</h3>
                 <p>+5492477564712</p>
-                <p>nombredelagencia@gmail.com</p>
+                <p>poueragency@gmail.com</p>
             </div>
             <div className={s.centerVertically}>
                 <hr/>
-                <p>© 2022 Todos los derechos reservados | NOMBRE agencia</p>
+                <p>© 2022 Todos los derechos reservados | Pouer Agency</p>
             </div>
             <div className={s.centerVertically}>
                     <h3>Seguinos en redes</h3>
