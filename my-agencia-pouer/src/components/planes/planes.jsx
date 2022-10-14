@@ -34,10 +34,10 @@ export default function Planes() {
     return (
         <>
             <section className={s.sectionPlanes}>
-                <h1 className={s.sectionTitulo}>Hoy más que nunca un sitio web<br /> es fundamental par cualquier empresa,<br /> comercio o profesional</h1>
+                <h1 className={s.sectionTitulo}>Hoy más que nunca un sitio web es fundamental para cualquier empresa, comercio o profesional</h1>
                 <p className={s.sectionText}>
-                    Empecemos hoy tu pagina web y mantené abierto tu negocio las 24 hs. los 365 días del año.<br />
-                    Pagálo HOY hasta en 3 cuotas sin interés con  dominio .com.ar, Hosting y Certificado SSL (web segura) por un año totalmente bonificado.
+                Empeza hoy mismo tu pagina web y mantenete en linea las 24hs <br></br> los 365 dias del año de la forma mas
+                segura y rapida, <br></br>haciendo de tu proyecto lo mas eficiente con nuestros servicios.
                 </p>
                 <h1 className={s.sectionSubtitulo}>Te ofrecemos un paquete integral de soluciones</h1>
             </section>

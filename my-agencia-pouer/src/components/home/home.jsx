@@ -23,42 +23,41 @@ export default function Home() {
 
                 </div>
                 <div>
-                    <img src={img1} alt="imagen" width="500px" />
+                    <img src={img1} alt="imagen" width="450px" />
                 </div>
 
 
             </section>
 
             <section className={h.section2}>
-                    <h1>Nuestros productos</h1>
                     <h2> ¿Por que elegirnos?</h2>
                    <div className={h.section3}>
                     <div>
                         <img src={icon1} alt="" />
-                        <h3 className={h.titulo}>Compromiso</h3>
-                        <p className={h.parrafo}>Somos conscientes de la importancia de <br></br> 
-                        cumplir con el desarrollo del trabajo en el <br></br> 
-                        tiempo estipulado. Ponemos al máximo <br></br> 
-                        nuestras capacidades para sacar adelante <br></br>
+                        <h3 className={h.titulo}>Compromiso</h3> <br></br>
+                        <p className={h.parrafo}>Somos conscientes de la importancia de 
+                        cumplir con el desarrollo del trabajo en el 
+                        tiempo estipulado. Ponemos al máximo 
+                        nuestras capacidades para sacar adelante 
                         la tarea encomendada.</p>
 
                     </div>
                     <div>
                          <img src={icon2} alt="" />
-                        <h3 className={h.titulo}>Llevamos tu negocio a internet con cero estres</h3>
-                        <p className={h.parrafo} >Nuestros planes de Diseño web se adaptan a todas las <br></br>
-                            necesidades y presupuestos. <br></br>
-                           Tenemos el sitio que tu proyecto esta necesitando: <br></br>
-                           Landing pages, Sitios corporativos y Tiendas Online para <br></br>
+                        <h3 className={h.titulo}>Llevamos tu negocio a internet <br></br> con cero estres</h3>
+                        <p className={h.parrafo} >Nuestros planes de Diseño web se adaptan a todas las 
+                            necesidades y presupuestos. 
+                           Tenemos el sitio que tu proyecto esta necesitando: 
+                           Landing pages, Sitios corporativos y Tiendas Online para 
                            que puedas vender en línea las 24/7, los 365 días del año.</p>
                         </div>
                     <div>
                     <img src={icon3} alt="" />
-                        <h3 className={h.titulo} >Vocacion</h3>
-                        <p className={h.parrafo} >Estamos encantados con nuestro trabajo.  <br></br>
-                            Dividir para vencer es toda una filosofía de vida y  <br></br>
-                             eso es lo que hacemos cada día para resolver  <br></br>
-                             problemas o construir proyectos.  <br></br> </p>
+                        <h3 className={h.titulo} >Vocacion</h3> <br></br>
+                        <p className={h.parrafo} >Estamos encantados con nuestro trabajo.  
+                            Dividir para vencer es toda una filosofía de vida y  
+                             eso es lo que hacemos cada día para resolver  
+                             problemas o construir proyectos.   </p>
                     </div>
                     </div>
 

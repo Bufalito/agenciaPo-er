@@ -9,13 +9,13 @@
 }
 
 .sectionTitulo h1 {
-    font-size: 42px;
+    font-size: 2rem;
     font-weight: 600;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .sectionTitulo p {
-    font-size: 22px;
+    font-size: 1.5rem;
     font-weight: 600;
     width: 70%;
     text-align: center;
@@ -28,8 +28,8 @@
     margin: 10em auto 6em;
     border: 2px solid #000000;
     border-radius: 45px;
-    width: 80%;
-    padding: 2em 0 4em 0;
+    width: 90%;
+    padding: 2em 2em 4em 0;
 }
 
 .sectionDescriptions h2 {
@@ -38,25 +38,26 @@
 }
 
 .generalDivDesc {
-    width: 80%;
-    margin: 4em auto;
+    width: 90%;
+    margin: 3em auto;
     display: grid;
     grid-template-areas:
         "divDesc divDesc "
         "divDesc divDesc ";
     grid-template-columns: repeat(2, 1fr);
-    gap: 5.5em;
+    gap: 6em;
 }
 
 .divDesc h3 {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 28px;
 }
 
 .divDesc p {
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 20px;
     margin-top: 0.5em;
+    max-width: 68.75rem;
 }
 
 .sectionPrice {
@@ -126,12 +127,12 @@
 }
 
 .btnConsultar {
-    width: 18%;
+    width: 12%;
     height: 2em;
     color: #fff;
     padding: 5px 10px;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
@@ -165,18 +166,24 @@
     opacity: 0;
     font-size: 36px;
     line-height: 40px;
-    top: 24%;
+    top: 10%;
     right: -20px;
     transition: 0.4s;
 }
 
 .detallesEspecificos {
-    margin: auto 8em;
+    margin: auto 3.5em;
     align-items: center;
+}
+
+.detallesEspecificos h2{
+    font-size: 1.8rem;
+
 }
 
 .detallesEspecificos p {
     margin-top: 2em;
+    font-weight: 600;
 
 }
 

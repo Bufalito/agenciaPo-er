@@ -1,16 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap");
+/* *{
+border: 2px red solid;
 
+} */
 
 .containerHome {
     margin-top: 150px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-right: 35px;
     margin-left: 35px;
+    gap: 70px;
 }
 
 .containerHome h1 {
-    font-size: 64px;
+    font-size: 3.5rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -21,18 +25,18 @@
 
 
 .containerHome p {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
 
 .buttonHome {
     border-radius: 35px;
-    height: 59px;
-    width: 131px;
+    height: 50px;
+    width: 100px;
     background-color: black;
     color: white;
-    font-size: 24px;
+    font-size: 1rem;
     margin-top: 20px;
 
 
@@ -42,6 +46,7 @@
     background-color: white;
     color: black;
     stroke: black 2px;
+    transition: 0.5s;
 
 }
 
@@ -51,6 +56,8 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
 
 }
 
@@ -74,16 +81,17 @@
 .section3 {
     display: flex;
     justify-content: space-around;
-    margin-top: 80px;
-    margin-top: 70px;
+    margin-top: 90px;
     justify-content: center;
     gap: 90px;
+    margin-left: 80px;
+    margin-right: 80px;
 
 
 }
 
 .titulo {
-    font-size: 16px;
+    font-size: 1rem;
     margin-top: 30px;
     text-align: center;
     font-weight: 600;
@@ -91,11 +99,10 @@
 }
 
 .parrafo {
-    font-size: 13px;
+    font-size: 0.938rem;
     margin-top: 7px;
-    text-align: center;
     font-weight: 400;
-    max-height: 300px;
+    text-align: center;
 }
 
 .banner {
