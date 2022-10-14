@@ -83,7 +83,7 @@ export default function Contacto() {
 
 
 
-      <button onClick={sendEmail} type="submit">
+      <button className={s.boton} onClick={sendEmail} type="submit">
         ENVIAR
       </button> 
       </div>

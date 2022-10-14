@@ -161,6 +161,10 @@ article section p {
     align-items: center;
 }
 
+.acordion p {
+    font-size: 1rem;
+}
+
 .acordion input {
     margin-right: 1em;
 }
