@@ -6,27 +6,27 @@
 }
 
 .landing {
-  background-image: url("./images/Landing.svg");
+  background-image: url("./images/homeBg.jpg");
   background-size: cover;
 }
 
 .planes {
-  background-image: url("./images/Planes.svg");
+  background-image: url("./images/planesBg.jpg");
   background-size: cover;
 
 }
 
 .detallesPlanes {
-  background-image: url("./images/PlanesDetallados.svg");
+  background-image: url("./images/formBh.jpg");
   background-size: cover;
 
 }
 
-/* .contacto {
+.contacto {
   background-size: cover;
-  background-image: url("./images/Contacto.svg");
+  background-image: url("./images/formBh.jpg");
 
-} */
+}
 
 .bgAzul {
 
