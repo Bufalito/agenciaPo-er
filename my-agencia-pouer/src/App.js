@@ -16,7 +16,6 @@ import MercadoPago from "./components/mercadoPago/mercadoPago"
 function App() {
   const location = useLocation().pathname.slice(1)
   const fondo = location
-  console.log(fondo ? fondo : "landing")
   const esNosotros = location === "nosotros"
   return (
     <div className={fondo ? fondo : "landing"}>

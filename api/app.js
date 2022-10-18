@@ -2,7 +2,7 @@ const express = require('express');
 const routes = require('./rutas/index');
 const mercadopago = require('mercadopago');
 
-const { ACCESS_TOKEN } = process.env;
+const { ACCESS_TOKEN, FRONT } = process.env;
 
 const app = express();
 app.name = 'API';
@@ -16,7 +16,7 @@ app.use(
 );
 //cors
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*'); // update to match the domain you will make the request from
+    res.header('Access-Control-Allow-Origin', "*"); // update to match the domain you will make the request from
     res.header('Access-Control-Allow-Credentials', 'true');
     res.header(
         'Access-Control-Allow-Headers',

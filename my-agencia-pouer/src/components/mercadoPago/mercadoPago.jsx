@@ -7,7 +7,7 @@ export default function MercadoPago() {
     const id = useLocation().search.substring(1)
 
     const obtenerPreference = async function () {
-        const res = await axios.post(`http://localhost:3001/mercadopago/pay/${id}`, {
+        const res = await axios.post(`/mercadopago/pay/${id}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

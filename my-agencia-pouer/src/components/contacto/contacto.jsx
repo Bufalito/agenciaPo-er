@@ -6,93 +6,94 @@ import whatsapp from "../../icons/whatsapp-icon.svg";
 import emailjs from "emailjs-com";
 import img1 from '../../images/formsimg.svg'
 
+
 export default function Contacto() {
   const form = useRef();
-
+  const { REACT_APP_SERVICE, REACT_APP_TEMPLATE, REACT_APP_API_KEY } = process.env
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs.sendForm(
-      "service_iyrkua9",
-      "template_kxxb1cs",
+      REACT_APP_SERVICE,
+      REACT_APP_TEMPLATE,
       form.current,
-      "oi2W1zY6VQa6cJMVc"
+      REACT_APP_API_KEY
     );
 
   };
 
   return (
     <>
-    <div className={s.container}>
-      <div className={s.imgContainer}>
-        <h1> Mas cerca de vos, <br></br>
-           en todo momento y a toda hora</h1> 
-         <img src={img1} alt="logo" width="600px" /> 
+      <div className={s.container}>
+        <div className={s.imgContainer}>
+          <h1> Mas cerca de vos, <br></br>
+            en todo momento y a toda hora</h1>
+          <img src={img1} alt="logo" width="600px" />
 
 
 
-      </div>
-      <div className={s.inputs}>
-        <h1>Contános cómo te podemos ayudar y nuestro equipo te va a estar respondiendo</h1>
-        <form ref={form} onSubmit={sendEmail}>
-      
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Nombre/Empresa"
-                required
-              />
-          
-            
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email"
-                required
-              />
-          
-            
-              {/* <input
+        </div>
+        <div className={s.inputs}>
+          <h1>Contános cómo te podemos ayudar y nuestro equipo te va a estar respondiendo</h1>
+          <form ref={form} onSubmit={sendEmail}>
+
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Nombre/Empresa"
+              required
+            />
+
+
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+
+
+            {/* <input
                 type="tel"
                 name="phone"
                 id="phone"
                 placeholder="TELEFONO"
                 required
               /> */}
-            
-            
-              <input
-                type="text"
-                name="subject"
-                id="subject"
-                placeholder="Asunto"
-                required
-              />
-          
-            
-              <textarea
-                name="message"
-                id="message"
-                rows="3"
-                placeholder="Mensaje"
-              ></textarea>
-            
+
+
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Asunto"
+              required
+            />
+
+
+            <textarea
+              name="message"
+              id="message"
+              rows="3"
+              placeholder="Mensaje"
+            ></textarea>
+
           </form>
 
 
 
-      <button className={s.boton} onClick={sendEmail} type="submit">
-        ENVIAR
-      </button> 
+          <button className={s.boton} onClick={sendEmail} type="submit">
+            ENVIAR
+          </button>
+        </div>
+
+
+
+
+
       </div>
-
-
-
-
-
-    </div>
       {/* <h1 className={s.tituloContacto}>Atencion Personalizada</h1>
       <h3 className={s.subtituloContacto}>
         Contanos como te podemos ayudar y <br></br> nuestro equipo te va a estar
