@@ -73,7 +73,7 @@ export default function Planes() {
             <section className={s.sectionAsesorarme}>
                 <h1 className={s.titleAsesorarme}>Si no encuentras lo pagina que se adapte a tus <br /> necesidades no dudes en consultarnos</h1>
                 <hr className={s.hrAsesorarme} />
-                <Link to={'/contacto'}>
+                <Link to={'/contacto'} className={s.link}  >
                 <button className={s.btnAsesorarme}>Asesorarme</button>
                 </Link>
             </section>
