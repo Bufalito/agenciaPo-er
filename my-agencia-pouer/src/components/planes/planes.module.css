@@ -191,10 +191,10 @@
     background: #12275C;
 }
 
-.btnAsesorarme:hover {
+/* .btnAsesorarme:hover {
     background: #fff;
     color: #12275C
-}
+} */
 
 .link{
     text-decoration: none;
@@ -215,7 +215,7 @@
 }
 
 .link:hover{
-    background: #fff;
+       background: #fff;
     color: #12275C
 
 }
