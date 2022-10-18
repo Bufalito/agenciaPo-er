@@ -75,9 +75,9 @@
     height: auto;
     max-height: 90vh;
     position: fixed;
-    /*  background-color: #12275C; */
-    background-image: url("../../images/ModalPay.svg");
-    background-size: cover;
+     background-color: #12275C;
+    /* background-image: url("../../images/ModalPay.svg"); */
+    /* background-size: cover; */
     border-radius: 40px;
     padding: 1em 2em 2em 2em;
     display: grid;
