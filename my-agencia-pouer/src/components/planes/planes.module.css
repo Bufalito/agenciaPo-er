@@ -213,3 +213,9 @@
     border: 2px solid #12275C;
     background: #12275C;
 }
+
+.link:hover{
+    background: #fff;
+    color: #12275C
+
+}
