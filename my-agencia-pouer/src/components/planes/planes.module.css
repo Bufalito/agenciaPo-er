@@ -198,4 +198,18 @@
 
 .link{
     text-decoration: none;
+    width: 11%;
+    height: 3.75rem;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: 600;
+    font-size: 1.188rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 50px;
+    border: 2px solid #12275C;
+    background: #12275C;
 }
