@@ -126,3 +126,27 @@
     display: flex;
     justify-content: center;
 }
+
+
+@media screen and (max-width: 480px) {
+    .containerDiv  {
+        border-radius: 0px;
+    }
+
+    .tituloN{
+        font-size: 45px;
+        width: 350px;
+    }
+
+    .parrafoN{
+        width: 340px;
+        font-size: 20px;
+        
+    }
+
+
+
+
+
+
+}

@@ -218,3 +218,62 @@
     color: #12275C
 
 } */
+
+
+
+@media screen and (max-width: 480px) {
+    .sectionTitulo {
+        width: 400px;
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .sectionText{
+        width: 400px;
+        font-size: 21px;
+        text-align: initial;
+        display: none;
+    }
+
+    .sectionSubtitulo{
+        width: 400px;
+        margin-top: -10px;
+        text-decoration: underline;
+    }
+
+
+
+    .divIcons{
+        width: 250px;
+    }
+    
+    .sectionIcons{
+        width: 400px;
+        grid: none;
+        flex-direction: column;
+    }
+
+    .divIcons .textoIcons{
+        width: 300px;
+        font-size: 20px;
+    }
+
+    .generalDivCards{
+        width: 350px;
+        flex-direction: column;
+    }
+
+    .cards{
+        width: 300px;
+        margin-top: 8px;
+        margin-left: 25px;
+    }
+    .titleAsesorarme{
+        margin-top: -25px;
+        width: 350px;
+        font-size: 25px;
+    }
+
+
+
+}
