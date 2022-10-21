@@ -31,8 +31,6 @@
     font-size: 64px;
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
-    height: 64px;
-
 }
 
 .sections h2:hover {
@@ -41,8 +39,82 @@
 }
 
 
-.Link{
+.Link {
     text-decoration: none;
     color: black;
 
+}
+
+.btnOpen {
+    display: none;
+}
+
+.sections button {
+    display: none;
+}
+
+@media screen and (max-width:480px) {
+    .navContainer {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .btnOpen {
+        display: block;
+        margin-top: 30px;
+        height: 40px;
+        width: 15%;
+        border-radius: 10px 0px 0px 10px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 2px 2px 4px #c8d0e7, -1px -1px 3px #fff;
+    }
+
+    .btnOpen img {
+        max-width: 50%;
+        min-height: 100%;
+    }
+
+    .sections {
+        height: 100vh;
+        background-color: rgba(210, 210, 210, 0.95);
+        width: 40%;
+        position: absolute;
+        margin: 0 0 0 60%;
+        padding-top: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        animation: open 1s ease;
+    }
+
+    .sections button {
+        display: block;
+        width: 30%;
+        margin: 15px 0 0 70%;
+        height: 35px;
+        border-radius: 10px 0px 0px 10px;
+        border: none;
+        box-shadow: 2px 2px 4px #c8d0e7, -1px -1px 3px #fff;
+        font-weight: 800;
+        font-size: 110%;
+    }
+
+    .sections .Link {
+        margin: 5% 0 0 10%;
+    }
+
+    .close {
+        display: none;
+    }
+}
+
+@keyframes open {
+    from {
+        margin: 0 0 0 100%;
+    }
+
+    to {
+        margin: 0 0 0 60%;
+    }
 }
