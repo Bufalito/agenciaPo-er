@@ -127,8 +127,8 @@
 }
 
 .btnConsultar {
-    width: 12%;
-    height: 2em;
+    width: 14%;
+    height: 2.5em;
     color: #fff;
     padding: 5px 10px;
     font-weight: 700;
@@ -166,7 +166,7 @@
     opacity: 0;
     font-size: 36px;
     line-height: 40px;
-    top: 10%;
+    top: 15%;
     right: -20px;
     transition: 0.4s;
 }

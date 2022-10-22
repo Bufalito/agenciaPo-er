@@ -22,7 +22,7 @@ export default function Home() {
             <button className={h.buttonHome}>Planes</button>
           </Link>
         </div>
-        <div>
+        <div className={h.aux}>
           <img src={img1} alt="imagen" width="450px" />
         </div>
       </section>

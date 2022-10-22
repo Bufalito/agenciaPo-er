@@ -79,7 +79,7 @@
         height: 100vh;
         background-color: rgba(210, 210, 210, 0.95);
         width: 40%;
-        position: absolute;
+        position: fixed;
         margin: 0 0 0 60%;
         padding-top: 12px;
         display: flex;

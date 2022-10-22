@@ -1,7 +1,7 @@
-.cointainerM{
+.cointainerM {
     width: 100%;
     height: 120px;
-    background-color: rgb(18,39,92);
+    background-color: rgb(18, 39, 92);
     color: white;
     display: flex;
     justify-content: space-evenly;
@@ -10,12 +10,15 @@
 .centerVertically {
     margin: auto 0;
 }
+
 .centerVertically1 {
     margin: auto 0;
 }
+
 .centerVertically12 {
     margin: auto 0;
 }
+
 .imagesContainer {
     margin-top: 1rem;
     display: flex;
@@ -23,31 +26,31 @@
 
 }
 
-@media screen and (max-width: 480px){
-    .cointainerM{
+@media screen and (max-width: 480px) {
+    .cointainerM {
         display: flex;
-        width: 410px;
+        width: 100%;
         height: 200px;
     }
-    
-  
-    .centerVertically1 p{
-        font-size: 15px; 
+
+
+    .centerVertically1 p {
+        font-size: 15px;
     }
 
     .centerVertically1 h3 {
         font-size: 16;
         margin-top: -80px;
     }
-   
+
     .centerVertically12 {
         display: none;
     }
 
-    .centerVertically12{
+    .centerVertically12 {
         display: none;
     }
-   
+
 
     .cointainerM .centerVertically h3 {
         font-size: 17px;
@@ -62,6 +65,7 @@
         height: 30px;
         gap: -5px;
     }
+
     .cointainerM .centerVertically .imagesContainer {
         display: flex;
         justify-content: center;
