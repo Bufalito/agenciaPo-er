@@ -110,3 +110,45 @@
     justify-content: center;
     text-align: center;
 }
+
+@media screen and (max-width: 480px){
+    .imgContainer{
+        display: none;
+    }
+
+    .inputs {
+        width: 410px;
+        height: 900px;
+    }
+    .inputs h1{
+        margin-top: -10px;
+        font-size: 30px;
+        width: 350px;
+        text-align: center;
+        margin-left: 35px;
+
+    }
+    .inputs form{
+        width: 310px;
+        height: 600px;
+        margin-left: 50px;
+        margin-top: -18px;
+    
+    }
+    .container .inputs input {
+        width: 300px;
+        height: 40px;
+        border-radius: 10px;
+
+    }
+    .container .inputs textarea {
+        width: 300px;
+        border-radius: 10px;
+
+    }
+
+    .container .inputs .boton {
+        margin-top: -30px;
+        border-color: rgb(5, 31, 85);
+    }
+}

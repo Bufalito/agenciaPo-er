@@ -137,6 +137,19 @@
     .containerDiv  {
         border-radius: 0px;
     }
+    .quienes h1{
+        margin-top: -65px;
+        font-size: 30px;
+    }
+
+
+    .button1{ 
+        margin-right: 10px;
+        margin-left: -2;
+    }
+    .button2{
+        margin-left: -1px;
+    }
 
     .tituloN{
         font-size: 45px;
@@ -144,10 +157,27 @@
     }
 
     .parrafoN{
-        width: 340px;
-        font-size: 20px;
+        width: 345px;
+        font-size: 18px;
         
     }
+    .honores {
+        flex-direction: column;
+        height: 900px;
+        
+
+    }
+
+    .buttonFinal{
+        margin-top: -25px;
+
+    }
+
+   
+
+    .boxicon img{
+        margin-top: -15px;
+    } 
 
 
 

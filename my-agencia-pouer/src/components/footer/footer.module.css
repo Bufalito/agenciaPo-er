@@ -10,10 +10,64 @@
 .centerVertically {
     margin: auto 0;
 }
-
+.centerVertically1 {
+    margin: auto 0;
+}
+.centerVertically12 {
+    margin: auto 0;
+}
 .imagesContainer {
     margin-top: 1rem;
     display: flex;
     gap: 2rem;
+
+}
+
+@media screen and (max-width: 480px){
+    .cointainerM{
+        display: flex;
+        width: 410px;
+        height: 200px;
+    }
+    
+  
+    .centerVertically1 p{
+        font-size: 15px; 
+    }
+
+    .centerVertically1 h3 {
+        font-size: 16;
+        margin-top: -80px;
+    }
+   
+    .centerVertically12 {
+        display: none;
+    }
+
+    .centerVertically12{
+        display: none;
+    }
+   
+
+    .cointainerM .centerVertically h3 {
+        font-size: 17px;
+        margin-top: -85px;
+        margin-left: 30px;
+        text-align: end;
+
+    }
+
+    .imagesContainer img {
+        width: 40px;
+        height: 30px;
+        gap: -5px;
+    }
+    .cointainerM .centerVertically .imagesContainer {
+        display: flex;
+        justify-content: center;
+        gap: 0rem;
+        margin-left: 20px;
+    }
+
 
 }
