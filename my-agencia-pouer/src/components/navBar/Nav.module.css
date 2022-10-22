@@ -78,6 +78,10 @@
     .sections {
         height: 100vh;
         background-color: rgba(210, 210, 210, 0.95);
+        background-image: url("../../images/fondoNavMobile.svg");
+        background-repeat: no-repeat;
+        background-size: 832%;
+        background-position: center;
         width: 40%;
         position: fixed;
         margin: 0 0 0 60%;
