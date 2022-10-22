@@ -1,40 +1,46 @@
-import React from "react";
-import n from "./nosotros.module.css";
-import { Link } from "react-router-dom";
-import icono1 from "../../images/icono1.svg";
-import icono2 from "../../images/icono2.svg";
-import icono4 from "../../images/icono3.svg";
-import icono3 from "../../images/icono4.svg";
+import React from 'react';
+import n from './nosotros.module.css';
+import { Link } from 'react-router-dom';
+import icono1 from '../../images/icono1.svg';
+import icono2 from '../../images/icono2.svg';
+import icono4 from '../../images/icono3.svg';
+import icono3 from '../../images/icono4.svg';
+import { motion } from 'framer-motion';
 
 export default function Nosotros() {
   return (
     <>
       <div>
         <div className={n.containerDiv}>
-        <section>
-          <h1 className={n.tituloN}>
-            La mejor agencia <br></br> para el mejor proyecto
-          </h1>
-          <p className={n.parrafoN}>
-            Conformado por un equipo de <br></br>
-            desarrolladores, buscamos la mejor <br></br>
-            solucion a tu emprendimiento.
-          </p>
+          <motion.section
+            initial={{ x: 1000 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h1 className={n.tituloN}>
+              La mejor agencia <br></br> para el mejor proyecto
+            </h1>
+            <p className={n.parrafoN}>
+              Conformado por un equipo de <br></br>
+              desarrolladores, buscamos la mejor <br></br>
+              solucion a tu emprendimiento.
+            </p>
 
-          <Link to={"/planes"}>
-            <button className={n.button1}>Ver Planes</button>
-          </Link>
-          <Link to={"/contacto"}>
-            <button className={n.button2}>Asesorarme</button>
-          </Link>
-        </section>
-
-
+            <Link to={'/planes'}>
+              <button className={n.button1}>Ver Planes</button>
+            </Link>
+            <Link to={'/contacto'}>
+              <button className={n.button2}>Asesorarme</button>
+            </Link>
+          </motion.section>
         </div>
 
-       
-
-        <section className={n.quienes}>
+        <motion.section
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className={n.quienes}
+        >
           <h1>¿Quienes somos?</h1>
           <p>
             Un grupo de desarrolladores y diseñadores web, <br></br>
@@ -43,29 +49,41 @@ export default function Nosotros() {
             eficaces siendo capaces de llevar a término tu proyecto <br></br>
             con su respectivo diseño con total precisión.
           </p>
-        </section>
+        </motion.section>
 
-        <section className={n.honores}>
+        <motion.section
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className={n.honores}
+        >
           <div className={n.boxicon}>
-            <img src={icono1} alt="" />
+            <img src={icono1} alt="" className={n.bannerImage} height={100} width={100} />
             +10 proyectos realizados
           </div>
           <div className={n.boxicon}>
-            <img src={icono2} alt="" />
+            <img src={icono2} alt="" className={n.bannerImage} height={100} width={100} />
             +20 clientes sastifechos
           </div>
           <div className={n.boxicon}>
-            <img src={icono3} alt="" />
+            <img src={icono3} alt="" className={n.bannerImage} height={100} width={100} />
             +50 consultas
           </div>
           <div className={n.boxicon}>
-            <img src={icono4} alt="" />
+            <img src={icono4} alt="" className={n.bannerImage} height={100} width={100} />
             Calidad & Efectividad
           </div>
-        </section>
+        </motion.section>
         <div className={n.center}>
-          <Link to={"/contacto"}>
-            <button className={n.buttonFinal}>Asesorarme</button>
+          <Link to={'/contacto'}>
+            <motion.button
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              className={n.buttonFinal}
+            >
+              Asesorarme
+            </motion.button>
           </Link>
         </div>
       </div>

@@ -75,6 +75,7 @@
     font-weight: 600;
     height: 3rem;
     width: 5rem;
+    cursor: pointer;
 }
 
 
@@ -83,4 +84,29 @@
     color:rgb(5, 31, 85) ;
     transition: 0.5s;
 
+}
+.modal {
+    width: 500px;
+    height: 200px;
+    background-color: rgb(8, 47, 130);
+    color: white;
+    padding: 8px;
+    border-radius: 16px;
+    font-size: xx-large;
+    position: relative;
+}
+.x_icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.message_popup {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }

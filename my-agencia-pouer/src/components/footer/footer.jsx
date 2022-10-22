@@ -5,7 +5,7 @@ import s from './footer.module.css'
 
 export default function Footer(){
     return (
-        <div className={s.cointainerM}>
+        <footer className={s.cointainerM}>
             <div className={s.centerVertically}>
                 <h3>Contacto</h3>
                 <p>+5492477564712</p>
@@ -23,7 +23,7 @@ export default function Footer(){
                     <img src={whatsapp} alt="Whatsapp logo" />
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
 

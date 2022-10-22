@@ -5,6 +5,9 @@
   font-family: 'Poppins', sans-serif;
 }
 
+body{
+  overflow-x: hidden;
+}
 .landing {
   background-image: url("./images/homeBg.jpg");
   background-size: cover;
