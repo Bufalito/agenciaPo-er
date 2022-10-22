@@ -67,7 +67,7 @@ const pago = (id) => {
                 }
             ],
             back_urls: {
-                success: process.env.FRONT + '/',
+                success: process.env.FRONT + '/aprobado',
                 failure: process.env.FRONT + '/',
                 pending: process.env.FRONT + '/',
             },
