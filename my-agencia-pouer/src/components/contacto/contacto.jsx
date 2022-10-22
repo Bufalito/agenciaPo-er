@@ -21,11 +21,11 @@ export default function Contacto() {
 
   return (
     <>
-      <motion.div 
-      initial={{ opacity: 0 }} 
-      whileInView={{ opacity: 1 }} 
-      transition={{ duration: 1 }} 
-      className={s.container}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className={s.container}
       >
         <div className={s.imgContainer}>
           <h1>

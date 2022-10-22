@@ -22,6 +22,6 @@ function ScrollToTop() {
 root.render(
   <BrowserRouter>
     <ScrollToTop />
-      <App />
+    <App />
   </BrowserRouter>
 );
