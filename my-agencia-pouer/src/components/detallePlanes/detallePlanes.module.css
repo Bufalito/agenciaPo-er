@@ -238,3 +238,54 @@
 .modalInActive {
     display: block;
 }
+
+@media screen and (max-width: 480px){
+    .sectionTitulo{
+        width: 350px;
+    }
+    .sectionTitulo p {
+        font-size: 22px;
+        margin-top: -10px;
+    }
+
+    .sectionDescriptions{
+        width: 350px;       
+    }
+    .sectionDescriptions h2{
+        text-align: center;
+
+    }
+.generalDivDesc{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 30px;
+}
+.detallesEspecificos h2 {
+    font-size: 34px;
+}
+
+.banner {
+    width: 210px;
+}
+.banner2{
+    width: 210px;
+}
+
+.banner p {
+    font-size: 30px;
+
+}
+
+.banner2 p{
+    font-size: 17px;
+    margin-top: 22px;
+} 
+
+.btnConsultar{
+    width: 150px;
+    height: 50px;
+
+}
+
+}
