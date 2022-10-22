@@ -7,6 +7,7 @@ import Nosotros from "./components/nosotros/nosotros";
 import Planes from "./components/planes/planes";
 import Nav from "./components/navBar/Nav";
 import Footer from "./components/footer/footer";
+import Aprobado from "./components/backurl/aprobado";
 import { useLocation } from "react-router-dom";
 
 import MercadoPago from "./components/mercadoPago/mercadoPago"
@@ -28,6 +29,8 @@ function App() {
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/planes" element={<Planes />} />
         <Route path="/mercadoPago" element={<MercadoPago />} />
+        <Route path="/aprobado" element={<Aprobado />} />
+
       </Routes>
       <Footer />
     </div>
