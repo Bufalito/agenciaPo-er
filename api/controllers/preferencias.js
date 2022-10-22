@@ -66,6 +66,11 @@ const pago = (id) => {
                     title: data[categoriaWeb].titulo
                 }
             ],
+            back_urls: {
+                success: process.env.FRONT + '/',
+                failure: process.env.FRONT + '/',
+                pending: process.env.FRONT + '/',
+            },
         }
         return preference;
     }
