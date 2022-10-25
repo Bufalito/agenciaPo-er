@@ -1,10 +1,10 @@
 import React from 'react';
 import n from './nosotros.module.css';
 import { Link } from 'react-router-dom';
-import icono1 from '../../images/icono1.svg';
-import icono2 from '../../images/icono2.svg';
-import icono4 from '../../images/icono3.svg';
-import icono3 from '../../images/icono4.svg';
+import icono1 from '../../icons/proyectosRealizados.svg';
+import icono2 from '../../icons/clientesSatisfechos.svg';
+import icono4 from '../../icons/consultas.svg';
+import icono3 from '../../icons/calidadEfectividad.svg';
 import { motion } from 'framer-motion';
 
 export default function Nosotros() {
@@ -57,22 +57,10 @@ export default function Nosotros() {
           transition={{ duration: 0.8 }}
           className={n.honores}
         >
-          <div className={n.boxicon}>
-            <img src={icono1} alt="" className={n.bannerImage} height={100} width={100} />
-            +10 proyectos realizados
-          </div>
-          <div className={n.boxicon}>
-            <img src={icono2} alt="" className={n.bannerImage} height={100} width={100} />
-            +20 clientes sastifechos
-          </div>
-          <div className={n.boxicon}>
-            <img src={icono3} alt="" className={n.bannerImage} height={100} width={100} />
-            +50 consultas
-          </div>
-          <div className={n.boxicon}>
-            <img src={icono4} alt="" className={n.bannerImage} height={100} width={100} />
-            Calidad & Efectividad
-          </div>
+          <img src={icono1} alt="" className={n.icon1} />
+          <img src={icono2} alt="" className={n.icon2} />
+          <img src={icono4} alt="" className={n.icon4} />
+          <img src={icono3} alt="" className={n.icon3} />
         </motion.section>
         <div className={n.center}>
           <Link to={'/contacto'}>
