@@ -29,7 +29,10 @@ export default function DetallePlanes() {
           {DETALLES_DE_PLANES[location].sections.map((e) => {
             return (
               <div className={s.divDesc}>
-                <h3>{e.tituloSection}</h3>
+                <span>
+                  <h3>{e.tituloSection}</h3>
+                  <img src={e.icon} alt="icon" />
+                </span>
                 <p>{e.descriptionSection}</p>
               </div>
             );

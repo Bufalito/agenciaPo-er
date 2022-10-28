@@ -5,22 +5,25 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { TIPOS_DE_PLANES, PLANES_DATA } from '../../templates/planesItems';
 
+import moreInfo from "../../icons/moreInfo.svg"
+
 export default function Planes() {
   return (
-    <motion.div 
-    initial={{ opacity: 0 }} 
-    whileInView={{ opacity: 1 }} 
-    transition={{ duration: 1 }}
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
     >
       <section className={s.sectionPlanes}>
         <h1 className={s.sectionTitulo}>
-          Hoy más que nunca un sitio web es fundamental para cualquier empresa, comercio o profesional
+          Hoy más que nunca un sitio web es fundamental para cualquier empresa, comercio o profesional.
         </h1>
         <p className={s.sectionText}>
-          Empeza hoy mismo tu pagina web y mantenete en linea las 24hs <br></br> los 365 dias del año de la forma mas segura y
-          rapida, <br></br>haciendo de tu proyecto lo mas eficiente con nuestros servicios.
+          Empeza hoy mismo tu pagina web y mantenete en linea las 24hs <br></br>
+          los 365 dias del año de la forma mas segura y rapida, <br></br>
+          haciendo de tu proyecto lo mas eficiente con nuestros servicios.
         </p>
-        <h1 className={s.sectionSubtitulo}>Te ofrecemos un paquete integral de soluciones</h1>
+        <h1 className={s.sectionSubtitulo}>Te ofrecemos un paquete integral de soluciones.</h1>
       </section>
 
       <section className={s.sectionIcons}>
@@ -34,7 +37,12 @@ export default function Planes() {
             >
               <img src={e.img} className={s.icons} />
               <h1 className={s.tituloIcons}>{e.titulo}</h1>
-              <p className={s.textoIcons}>{e.texto}</p>
+              <p className={s.textoIcons}>
+                {e.texto}
+                {e.explicacion && <div tooltip={e.explicacion}> <img src={moreInfo} alt="mas info" /></div>}
+              </p>
+
+
             </motion.div>
           );
         })}

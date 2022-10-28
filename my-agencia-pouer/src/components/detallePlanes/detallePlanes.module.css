@@ -51,6 +51,7 @@
 .divDesc h3 {
     font-weight: 700;
     font-size: 28px;
+    margin-right: 1em;
 }
 
 .divDesc p {
@@ -58,6 +59,11 @@
     font-size: 20px;
     margin-top: 0.5em;
     max-width: 68.75rem;
+}
+
+.divDesc span {
+    display: flex;
+    width: fit-content;
 }
 
 .sectionPrice {
@@ -176,7 +182,7 @@
     align-items: center;
 }
 
-.detallesEspecificos h2{
+.detallesEspecificos h2 {
     font-size: 1.8rem;
 
 }
@@ -239,53 +245,58 @@
     display: block;
 }
 
-@media screen and (max-width: 480px){
-    .sectionTitulo{
+@media screen and (max-width: 480px) {
+    .sectionTitulo {
         width: 350px;
     }
+
     .sectionTitulo p {
         font-size: 22px;
         margin-top: -10px;
     }
 
-    .sectionDescriptions{
-        width: 350px;       
+    .sectionDescriptions {
+        width: 350px;
     }
-    .sectionDescriptions h2{
+
+    .sectionDescriptions h2 {
         text-align: center;
 
     }
-.generalDivDesc{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-left: 30px;
-}
-.detallesEspecificos h2 {
-    font-size: 34px;
-}
 
-.banner {
-    width: 210px;
-}
-.banner2{
-    width: 210px;
-}
+    .generalDivDesc {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: 30px;
+    }
 
-.banner p {
-    font-size: 30px;
+    .detallesEspecificos h2 {
+        font-size: 34px;
+    }
 
-}
+    .banner {
+        width: 210px;
+    }
 
-.banner2 p{
-    font-size: 17px;
-    margin-top: 22px;
-} 
+    .banner2 {
+        width: 210px;
+    }
 
-.btnConsultar{
-    width: 150px;
-    height: 50px;
+    .banner p {
+        font-size: 30px;
 
-}
+    }
+
+    .banner2 p {
+        font-size: 17px;
+        margin-top: 22px;
+    }
+
+    .btnConsultar {
+        width: 150px;
+        height: 50px;
+
+    }
 
 }
