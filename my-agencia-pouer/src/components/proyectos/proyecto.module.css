@@ -1,0 +1,422 @@
+.container{
+    width: 100%;
+    height: 100vw;
+    margin-top: 10%;
+
+}
+
+.container h1{
+    margin-left: 5%;
+    font-size: 90px;
+}
+.container p {
+    margin-left: 5%;
+    font-size: 32px;
+    margin-bottom: 5%;
+
+}
+
+.grids{
+    margin-left: 5%;
+    width: 90%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, [col-start] 12fr [col-end]);
+    grid-template-rows: repeat(3, [row-start] auto [row-end]);
+}
+
+
+.children1{
+    background-image: url(../../images/Completed-bro.svg);
+    background-size: cover;
+     grid-area: row-start 1 / col-start 1 / row-end 1 / col-end 1;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+
+
+.hoverText{
+    visibility: hidden;
+}
+
+    .children1:hover h2 , .children1:hover span {
+
+    display: none;
+    }
+
+    .containerHover:hover h2, .containerHover:hover span {
+        display: none;
+    }
+
+
+    .children1:hover .containerHover{
+        animation: hoverUp 1s;
+        animation-fill-mode: forwards;
+        background-color: red;
+    }
+
+    .children1:hover  .hoverText{
+        visibility: visible;
+
+    }
+
+    .containerHover{
+        animation: out 1s;
+        animation-direction: initial;
+
+    }
+
+
+.children2{
+    background-color: rgb(54, 61, 122);
+    grid-area: row-start 1 / col-start 2 / row-end 1 / col-end 2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+    .children2:hover h2 , .children2:hover span {
+
+    display: none;
+    }
+
+    .containerHover:hover h2, .containerHover:hover span {
+        display: none;
+    }
+
+
+    .children2:hover .containerHover{
+        animation: hoverUp 1s;
+        animation-fill-mode: forwards;
+        background-color: yellow;
+
+    }
+
+    .children2:hover  .hoverText{
+        visibility: visible;
+    }
+
+
+
+
+
+
+
+
+
+
+.children3{
+    background-color: rgb(118, 4, 211);
+    grid-area: row-start 1 / col-start 3 / row-end 1 / col-end 3;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.children3:hover h2 , .children3:hover span {
+
+    display: none;
+    }
+
+    .containerHover:hover h2, .containerHover:hover span {
+        display: none;
+    }
+
+
+    .children3:hover .containerHover{
+        animation: hoverUp 1s;
+        animation-fill-mode: forwards;
+        background-color: yellow;
+
+    }
+
+    .children3:hover  .hoverText{
+        visibility: visible;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.children4{
+    background-color: rgb(118, 4, 211);
+    grid-area: row-start 2 / col-start 1 / row-end 2 / col-end 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+    .children4:hover h2 , .children4:hover span {
+
+    display: none;
+    }
+
+    .containerHover:hover h2, .containerHover:hover span {
+        display: none;
+    }
+
+
+    .children4:hover .containerHover{
+        animation: hoverUp 1s;
+        animation-fill-mode: forwards;
+        background-color: yellow;
+
+    }
+
+    .children4:hover  .hoverText{
+        visibility: visible;
+    }
+
+
+
+
+.children5{
+    background-color: rgb(151, 37, 107);
+    grid-area: row-start 2 / col-start 2 / row-end 2 / col-end 2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.children5:hover h2 , .children5:hover span {
+
+    display: none;
+    }
+
+    .containerHover:hover h2, .containerHover:hover span {
+        display: none;
+    }
+
+
+    .children5:hover .containerHover{
+        animation: hoverUp 1s;
+        animation-fill-mode: forwards;
+        background-color: yellow;
+
+    }
+
+    .children5:hover  .hoverText{
+        visibility: visible;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+.children6{
+    background-color: rgb(12, 125, 231);
+    grid-area: row-start 2 / col-start 3 / row-end 2 / col-end 3;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.children6:hover h2 , .children6:hover span {
+
+    display: none;
+    }
+
+    .containerHover:hover h2, .containerHover:hover span {
+        display: none;
+    }
+
+
+    .children6:hover .containerHover{
+        animation: hoverUp 1s;
+        animation-fill-mode: forwards;
+        background-color: yellow;
+
+    }
+
+    .children6:hover  .hoverText{
+        visibility: visible;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+.children7{
+    background-color: rgb(255, 124, 1);
+    grid-area: row-start 3 / col-start 1 / row-end 3 / col-end 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.children7:hover h2 , .children7:hover span {
+
+    display: none;
+    }
+
+    .containerHover:hover h2, .containerHover:hover span {
+        display: none;
+    }
+
+
+    .children7:hover .containerHover{
+        animation: hoverUp 1s;
+        animation-fill-mode: forwards;
+        background-color: yellow;
+
+    }
+
+    .children7:hover  .hoverText{
+        visibility: visible;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+.children8{
+    background-color: rgb(146, 175, 13);
+    grid-area: row-start 3 / col-start 2 / row-end 3 / col-end 2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+.children8:hover h2 , .children8:hover span {
+
+    display: none;
+    }
+
+    .containerHover:hover h2, .containerHover:hover span {
+        display: none;
+    }
+
+
+    .children8:hover .containerHover{
+        animation: hoverUp 1s;
+        animation-fill-mode: forwards;
+        background-color: rgb(199, 121, 192);
+
+    }
+
+    .children8:hover  .hoverText{
+        visibility: visible;
+    }
+
+
+
+
+
+
+
+
+
+
+
+.children9{
+    background-color: rgb(250, 0, 229);
+    grid-area: row-start 3 / col-start 3 / row-end 3 / col-end 3;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+.children9:hover h2 , .children9:hover span {
+
+    display: none;
+    }
+
+    .containerHover:hover h2, .containerHover:hover span {
+        display: none;
+    }
+
+
+    .children9:hover .containerHover{
+        animation: hoverUp 1s;
+        animation-fill-mode: forwards;
+        background-color: rgba(15, 111, 190, 0.685);
+
+    }
+
+    .children9:hover  .hoverText{
+        visibility: visible;
+    }
+
+@keyframes hoverUp {
+    from {height: 0%;}
+    to {height: 100%;}   
+
+    
+}
+
+@keyframes out {
+    from{height:100%}
+    to{height: 35%;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
